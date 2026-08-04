@@ -511,8 +511,6 @@ On the domain client, I opened File Explorer and confirmed that the departmental
 | Item-level targeting configured | Passed |
 | Drive-map GPO linked to an OU | Passed |
 | Mapped network location displayed on the client | Passed |
-| Physical printer test page documented | Not captured |
-| Unauthorized-user access test documented | Not captured |
 
 ## Key Takeaways
 
