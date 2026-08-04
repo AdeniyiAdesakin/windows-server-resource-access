@@ -73,11 +73,11 @@ To meet this requirement, I used Windows Server and Group Policy to deploy the r
 In **Group Policy Management**, I created a new GPO named `Printer_Policy`.
 
 <p align="center">
-  <img src="https://i.imgur.com/gNpXx1P.png" width="750" alt="Creating a new Group Policy Object for printer deployment">
+  <img src="https://i.imgur.com/oiGO6Op.png" width="750" alt="Creating a new Group Policy Object for printer deployment">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/wmWqfjM.png" width="750" alt="Naming the new Group Policy Object Printer Policy">
+  <img src="https://i.imgur.com/djiaZyB.png" width="750" alt="Naming the new Group Policy Object Printer Policy">
 </p>
 
 ### 2. Linked the Printer GPO to the Target OU
@@ -85,11 +85,11 @@ In **Group Policy Management**, I created a new GPO named `Printer_Policy`.
 I linked `Printer_Policy` to the `Toronto` organizational unit so that the printer deployment settings could apply to the accounts within that OU.
 
 <p align="center">
-  <img src="https://i.imgur.com/GsWetGy.png" width="750" alt="Linking an existing Group Policy Object to the Toronto OU">
+  <img src="https://i.imgur.com/1qYwc2u.png" width="750" alt="Linking an existing Group Policy Object to the Toronto OU">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/UvYBJDb.png" width="750" alt="Selecting Printer Policy from the available Group Policy Objects">
+  <img src="https://i.imgur.com/jHHGXMO.png" width="750" alt="Selecting Printer Policy from the available Group Policy Objects">
 </p>
 
 ### 3. Verified the Print Server Role
@@ -97,13 +97,13 @@ I linked `Printer_Policy` to the `Toronto` organizational unit so that the print
 From **Server Manager > Tools**, I opened **Print Management**.
 
 <p align="center">
-  <img src="https://i.imgur.com/6IBbJZJ.png" width="750" alt="Opening Print Management from Windows Server Manager">
+  <img src="https://i.imgur.com/yyoBnpo.png" width="750" alt="Opening Print Management from Windows Server Manager">
 </p>
 
 I also verified that **Print and Document Services > Print Server** was installed. If the role is not available, it can be installed through **Add Roles and Features**.
 
 <p align="center">
-  <img src="https://i.imgur.com/aT7xLO8.png" width="750" alt="Verifying the Print Server role under Print and Document Services">
+  <img src="https://i.imgur.com/vfX0fsz.png" width="750" alt="Verifying the Print Server role under Print and Document Services">
 </p>
 
 ### 4. Downloaded the Printer Driver
@@ -111,7 +111,7 @@ I also verified that **Print and Document Services > Print Server** was installe
 For the lab, I downloaded the **HP Universal Print Driver for Windows PCL 6 (64-bit)** from HP.
 
 <p align="center">
-  <img src="https://i.imgur.com/ypB3hrs.png" width="750" alt="Downloading the HP Universal Print Driver for Windows PCL 6">
+  <img src="https://i.imgur.com/kCHFsdr.png" width="750" alt="Downloading the HP Universal Print Driver for Windows PCL 6">
 </p>
 
 ### 5. Added the Printer Driver to the Server
@@ -119,51 +119,51 @@ For the lab, I downloaded the **HP Universal Print Driver for Windows PCL 6 (64-
 In Print Management, I expanded **Print Servers > ADDS-Server > Drivers**, right-clicked **Drivers**, and selected **Add Driver**.
 
 <p align="center">
-  <img src="https://i.imgur.com/Uju5kFO.png" width="750" alt="Selecting Add Driver from Windows Print Management">
+  <img src="https://i.imgur.com/h1Enztr.png" width="750" alt="Selecting Add Driver from Windows Print Management">
 </p>
 
 I started the Add Printer Driver Wizard.
 
 <p align="center">
-  <img src="https://i.imgur.com/Ql7vTK9.png" width="750" alt="Starting the Add Printer Driver Wizard">
+  <img src="https://i.imgur.com/1kcm27j.png" width="750" alt="Starting the Add Printer Driver Wizard">
 </p>
 
 I selected the `x64` processor architecture.
 
 <p align="center">
-  <img src="https://i.imgur.com/a5nn407.png" width="750" alt="Selecting the x64 processor architecture for the printer driver">
+  <img src="https://i.imgur.com/Gs4KuPZ.png" width="750" alt="Selecting the x64 processor architecture for the printer driver">
 </p>
 
 Because the driver was downloaded from the manufacturer, I selected **Have Disk**.
 
 <p align="center">
-  <img src="https://i.imgur.com/d1OoErM.png" width="750" alt="Selecting Have Disk in the Printer Driver Selection window">
+  <img src="https://i.imgur.com/C5cpy2H.png" width="750" alt="Selecting Have Disk in the Printer Driver Selection window">
 </p>
 
 I browsed to the extracted HP driver files.
 
 <p align="center">
-  <img src="https://i.imgur.com/bP3Ig7B.png" width="750" alt="Browsing for the extracted printer driver files">
+  <img src="https://i.imgur.com/HE2oAJj.png" width="750" alt="Browsing for the extracted printer driver files">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/8xkXEtD.png" width="750" alt="Selecting the HP Universal Print Driver folder">
+  <img src="https://i.imgur.com/cgBNEzS.png" width="750" alt="Selecting the HP Universal Print Driver folder">
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/pa9CpGY.png" width="750" alt="Confirming the HP Universal Print Driver installation path">
+  <img src="https://i.imgur.com/DuEBJ45.png" width="750" alt="Confirming the HP Universal Print Driver installation path">
 </p>
 
 I selected **HP Universal Printing PCL 6 (v7.2.0)**.
 
 <p align="center">
-  <img src="https://i.imgur.com/6x8Miy2.png" width="750" alt="Selecting HP Universal Printing PCL 6 version 7.2.0">
+  <img src="https://i.imgur.com/5I5T7jR.png" width="750" alt="Selecting HP Universal Printing PCL 6 version 7.2.0">
 </p>
 
 The wizard confirmed that the x64 printer driver was added successfully.
 
 <p align="center">
-  <img src="https://i.imgur.com/XiB0uvU.png" width="750" alt="Completing the Add Printer Driver Wizard">
+  <img src="https://i.imgur.com/odBu2ud.png" width="750" alt="Completing the Add Printer Driver Wizard">
 </p>
 
 ### 6. Created the TCP/IP Printer Queue
@@ -171,31 +171,31 @@ The wizard confirmed that the x64 printer driver was added successfully.
 Under **Print Servers > ADDS-Server > Printers**, I selected **Add Printer**.
 
 <p align="center">
-  <img src="https://i.imgur.com/vpBAqzU.png" width="750" alt="Adding a printer through Windows Print Management">
+  <img src="https://i.imgur.com/y29KTWD.png" width="750" alt="Adding a printer through Windows Print Management">
 </p>
 
 I selected **Add a TCP/IP or Web Services Printer by IP address or hostname**.
 
 <p align="center">
-  <img src="https://i.imgur.com/iIVYnSg.png" width="750" alt="Selecting TCP IP printer installation by address or hostname">
+  <img src="https://i.imgur.com/Afizfil.png" width="750" alt="Selecting TCP IP printer installation by address or hostname">
 </p>
 
 I entered the printer's network address and continued with the installation.
 
 <p align="center">
-  <img src="https://i.imgur.com/bQzD1eX.png" width="750" alt="Entering the network printer IP address">
+  <img src="https://i.imgur.com/QHaxKPI.png" width="750" alt="Entering the network printer IP address">
 </p>
 
 When automatic detection did not identify the printer, I selected **Hewlett Packard Jet Direct** as the device type.
 
 <p align="center">
-  <img src="https://i.imgur.com/ZO60rRX.png" width="750" alt="Selecting Hewlett Packard Jet Direct as the printer device type">
+  <img src="https://i.imgur.com/sUiN0mE.png" width="750" alt="Selecting Hewlett Packard Jet Direct as the printer device type">
 </p>
 
 I selected the HP Universal Printing PCL 6 driver that had already been installed on the server.
 
 <p align="center">
-  <img src="https://i.imgur.com/lDYazsq.png" width="750" alt="Selecting the installed HP Universal Printing PCL 6 driver">
+  <img src="https://i.imgur.com/TwgNJs8.png" width="750" alt="Selecting the installed HP Universal Printing PCL 6 driver">
 </p>
 
 ### 7. Shared the Printer
@@ -203,35 +203,35 @@ I selected the HP Universal Printing PCL 6 driver that had already been installe
 I enabled **Share this printer** and assigned a descriptive share name.
 
 <p align="center">
-  <img src="https://i.imgur.com/9Fzg9TJ.png" width="750" alt="Configuring the printer name and sharing settings">
+  <img src="https://i.imgur.com/owdf9eM.png" width="750" alt="Configuring the printer name and sharing settings">
 </p>
 
 I reviewed the queue configuration before completing the wizard.
 
 <p align="center">
-  <img src="https://i.imgur.com/wF5Gs3p.png" width="750" alt="Reviewing the network printer configuration">
+  <img src="https://i.imgur.com/6C5Ms8v.png" width="750" alt="Reviewing the network printer configuration">
 </p>
 
 The Network Printer Installation Wizard confirmed that the printer was installed successfully.
 
 <p align="center">
-  <img src="https://i.imgur.com/rQ9iQYP.png" width="750" alt="Completing the Network Printer Installation Wizard">
+  <img src="https://i.imgur.com/Qvqi5Ez.png" width="750" alt="Completing the Network Printer Installation Wizard">
 </p>
 
-> The printer-address screenshots were captured at different stages of the lab. A production deployment should use one documented static or DHCP-reserved printer address throughout the configuration.
+
 
 ### 8. Deployed the Printer Through Group Policy
 
 In Print Management, I right-clicked the shared printer and selected **Deploy with Group Policy**.
 
 <p align="center">
-  <img src="https://i.imgur.com/UzDQmwq.png" width="750" alt="Selecting Deploy with Group Policy for the shared printer">
+  <img src="https://i.imgur.com/IAZAX9j.png" width="750" alt="Selecting Deploy with Group Policy for the shared printer">
 </p>
 
 I selected `Printer_Policy` and added the printer connection to the GPO.
 
 <p align="center">
-  <img src="https://i.imgur.com/6px5OJB.png" width="750" alt="Adding the shared printer to Printer Policy">
+  <img src="https://i.imgur.com/Agd732q.png" width="750" alt="Adding the shared printer to Printer Policy">
 </p>
 
 The captured configuration contains both per-user and per-machine entries. The required deployment type should be selected according to whether the printer is assigned to users or computers.
@@ -247,7 +247,7 @@ gpupdate /force
 The output confirmed that both Computer Policy and User Policy updated successfully.
 
 <p align="center">
-  <img src="https://i.imgur.com/Pr6mToq.png" width="750" alt="Running gpupdate force and completing the Group Policy refresh">
+  <img src="https://i.imgur.com/oKzW8z2.png" width="750" alt="Running gpupdate force and completing the Group Policy refresh">
 </p>
 
 ### 10. Validated the Printer on the Client
@@ -255,7 +255,7 @@ The output confirmed that both Computer Policy and User Policy updated successfu
 On the Windows client, I opened **Control Panel > Hardware and Sound > Devices and Printers**. The HP shared printer appeared with `ADDS-Server` identified as the print server.
 
 <p align="center">
-  <img src="https://i.imgur.com/1QVKxHO.png" width="750" alt="Shared HP printer displayed on the Windows domain client">
+  <img src="https://i.imgur.com/zpS03rF.png" width="750" alt="Shared HP printer displayed on the Windows domain client">
 </p>
 
 ### 11. Published the Printer in Active Directory
@@ -263,7 +263,7 @@ On the Windows client, I opened **Control Panel > Hardware and Sound > Devices a
 In the printer's properties, I enabled **List in the directory**. This publishes the shared printer in Active Directory so domain users can locate it through directory searches.
 
 <p align="center">
-  <img src="https://i.imgur.com/ixqf8V5.png" width="750" alt="Publishing the shared printer in Active Directory">
+  <img src="https://i.imgur.com/QVvhTdo.png" width="750" alt="Publishing the shared printer in Active Directory">
 </p>
 
 ## Part 2: Configuring a Shared Folder and Mapped Drive
