@@ -273,13 +273,13 @@ In the printer's properties, I enabled **List in the directory**. This publishes
 In Server Manager, I opened **File and Storage Services**.
 
 <p align="center">
-  <img src="https://i.imgur.com/h4dnFIX.png" width="750" alt="Opening File and Storage Services in Server Manager">
+  <img src="https://i.imgur.com/5XpIrPk.png" width="750" alt="Opening File and Storage Services in Server Manager">
 </p>
 
 From **Shares**, I selected **Tasks > New Share**.
 
 <p align="center">
-  <img src="https://i.imgur.com/Ph3CHEI.png" width="750" alt="Starting the New Share Wizard from Server Manager">
+  <img src="https://i.imgur.com/c7TjK48.png" width="750" alt="Starting the New Share Wizard from Server Manager">
 </p>
 
 ### 2. Selected the SMB Share Profile
@@ -287,7 +287,7 @@ From **Shares**, I selected **Tasks > New Share**.
 I selected **SMB Share - Quick** as the file-share profile.
 
 <p align="center">
-  <img src="https://i.imgur.com/E6DFj70.png" width="750" alt="Selecting the SMB Share Quick profile">
+  <img src="https://i.imgur.com/L0W6IDO.png" width="750" alt="Selecting the SMB Share Quick profile">
 </p>
 
 ### 3. Selected the Server and Storage Location
@@ -295,7 +295,7 @@ I selected **SMB Share - Quick** as the file-share profile.
 I selected `ADDS-Server` and the `C:` volume as the location for the share.
 
 <p align="center">
-  <img src="https://i.imgur.com/KY3s8EZ.png" width="750" alt="Selecting ADDS Server and the C drive for the new share">
+  <img src="https://i.imgur.com/bZ4gZSn.png" width="750" alt="Selecting ADDS Server and the C drive for the new share">
 </p>
 
 ### 4. Configured the Share Name and Path
@@ -309,7 +309,7 @@ I configured the following share information:
 | UNC path | `\\ADDS-Server\O_HR_Share` |
 
 <p align="center">
-  <img src="https://i.imgur.com/ZHmChzP.png" width="750" alt="Configuring the O HR Share name and paths">
+  <img src="https://i.imgur.com/YRPferH.png" width="750" alt="Configuring the O HR Share name and paths">
 </p>
 
 ### 5. Reviewed the SMB Share Settings
@@ -317,7 +317,7 @@ I configured the following share information:
 I retained the selected caching setting and continued to the permissions page.
 
 <p align="center">
-  <img src="https://i.imgur.com/4uZEJ15.png" width="750" alt="Reviewing the SMB share configuration settings">
+  <img src="https://i.imgur.com/W4NVIFu.png" width="750" alt="Reviewing the SMB share configuration settings">
 </p>
 
 ### 6. Configured the Folder Permissions
@@ -325,53 +325,53 @@ I retained the selected caching setting and continued to the permissions page.
 In **Advanced Security Settings**, I disabled inherited permissions and converted the inherited entries into explicit permissions.
 
 <p align="center">
-  <img src="https://i.imgur.com/Xuod1GS.png" width="750" alt="Disabling inherited permissions for the O HR Share folder">
+  <img src="https://i.imgur.com/b9QOtmI.png" width="750" alt="Disabling inherited permissions for the O HR Share folder">
 </p>
 
 I removed the unnecessary user entries and selected **Add** to create a permission entry for the HR security group.
 
 <p align="center">
-  <img src="https://i.imgur.com/btRxDxN.png" width="750" alt="Adding a permission entry to the O HR Share folder">
+  <img src="https://i.imgur.com/eeW5X0t.png" width="750" alt="Adding a permission entry to the O HR Share folder">
 </p>
 
 I selected the `O_HR` Active Directory security group.
 
 <p align="center">
-  <img src="https://i.imgur.com/CFRiZqn.png" width="750" alt="Selecting the O HR Active Directory security group">
+  <img src="https://i.imgur.com/G9LisVZ.png" width="750" alt="Selecting the O HR Active Directory security group">
 </p>
 
-The original lab granted `O_HR` Full Control over the folder, subfolders, and files.
+I gave `O_HR` Full Control over the folder, subfolders, and files.
 
 <p align="center">
-  <img src="https://i.imgur.com/YgnouyW.png" width="750" alt="Granting the O HR security group folder permissions">
+  <img src="https://i.imgur.com/bHSiBdG.png" width="750" alt="Granting the O HR security group folder permissions">
 </p>
 
 I reviewed the resulting NTFS access-control entries.
 
 <p align="center">
-  <img src="https://i.imgur.com/gb58r4f.png" width="750" alt="Reviewing the completed O HR Share NTFS permissions">
+  <img src="https://i.imgur.com/DGok4C7.png" width="750" alt="Reviewing the completed O HR Share NTFS permissions">
 </p>
 
-> For normal departmental file access, `SYSTEM` and `Administrators` should retain Full Control while the department group is usually assigned **Modify**. Full Control should be limited to accounts that need to change permissions or ownership.
+P.S - I am aware that for normal departmental file access, `SYSTEM` and `Administrators` should retain Full Control while the department group is usually assigned **Modify**. Full Control should be limited to accounts that need to change permissions or ownership.
 
 ### 7. Created the SMB Share
 
 The permissions page showed the selected group and folder permissions.
 
 <p align="center">
-  <img src="https://i.imgur.com/AhsiOiv.png" width="750" alt="Reviewing share and folder permissions in the New Share Wizard">
+  <img src="https://i.imgur.com/CdM9u9k.png" width="750" alt="Reviewing share and folder permissions in the New Share Wizard">
 </p>
 
 I reviewed the configuration and selected **Create**.
 
 <p align="center">
-  <img src="https://i.imgur.com/HnnNYlR.png" width="750" alt="Confirming the O HR Share configuration">
+  <img src="https://i.imgur.com/NK6NoyW.png" width="750" alt="Confirming the O HR Share configuration">
 </p>
 
 The wizard confirmed that the SMB share and permissions were created successfully.
 
 <p align="center">
-  <img src="https://i.imgur.com/XkuS0mA.png" width="750" alt="Successful creation of the SMB share and permissions">
+  <img src="https://i.imgur.com/wUVEfpL.png" width="750" alt="Successful creation of the SMB share and permissions">
 </p>
 
 ### 8. Created the Mapped-Drive GPO
@@ -379,36 +379,30 @@ The wizard confirmed that the SMB share and permissions were created successfull
 In Group Policy Management, I created a new GPO.
 
 <p align="center">
-  <img src="https://i.imgur.com/IpAWsZu.png" width="750" alt="Creating a new Group Policy Object for the mapped drive">
+  <img src="https://i.imgur.com/FUqISyB.png" width="750" alt="Creating a new Group Policy Object for the mapped drive">
 </p>
 
 I named the GPO `O_HR Mapped drive`.
 
 <p align="center">
-  <img src="https://i.imgur.com/zvh0H6R.png" width="750" alt="Naming the O HR Mapped drive Group Policy Object">
+  <img src="https://i.imgur.com/8ak3JxJ.png" width="750" alt="Naming the O HR Mapped drive Group Policy Object">
 </p>
 
 I right-clicked the new GPO and selected **Edit**.
 
 <p align="center">
-  <img src="https://i.imgur.com/mMBibFu.png" width="750" alt="Editing the O HR Mapped drive Group Policy Object">
+  <img src="https://i.imgur.com/2h4r58z.png" width="750" alt="Editing the O HR Mapped drive Group Policy Object">
 </p>
 
 ### 9. Created the Drive Maps Preference
 
 In Group Policy Management Editor, I navigated to:
-
-```text
-User Configuration
-└── Preferences
-    └── Windows Settings
-        └── Drive Maps
-```
+`User Configuration > Preferences > Windows Settings > Drive Maps`
 
 I right-clicked **Drive Maps** and selected **New > Mapped Drive**.
 
 <p align="center">
-  <img src="https://i.imgur.com/8zNyEAy.png" width="750" alt="Creating a new mapped drive under Group Policy Preferences">
+  <img src="https://i.imgur.com/cIpPKMX.png" width="750" alt="Creating a new mapped drive under Group Policy Preferences">
 </p>
 
 ### 10. Configured the Mapped Drive
@@ -424,7 +418,7 @@ I configured the mapped-drive preference with the following values:
 | Drive letter configured | `H:` |
 
 <p align="center">
-  <img src="https://i.imgur.com/DMP2MQl.png" width="750" alt="Configuring the O HR mapped drive properties">
+  <img src="https://i.imgur.com/V24jCjR.png" width="750" alt="Configuring the O HR mapped drive properties">
 </p>
 
 ### 11. Enabled Item-Level Targeting
@@ -432,39 +426,37 @@ I configured the mapped-drive preference with the following values:
 On the **Common** tab, I enabled **Item-level targeting** and opened the Targeting Editor.
 
 <p align="center">
-  <img src="https://i.imgur.com/oz5jLTr.png" width="750" alt="Enabling item-level targeting for the mapped drive">
+  <img src="https://i.imgur.com/HpFlamA.png" width="750" alt="Enabling item-level targeting for the mapped drive">
 </p>
 
 I selected **Security Group** as the targeting condition.
 
 <p align="center">
-  <img src="https://i.imgur.com/qshWfcQ.png" width="750" alt="Selecting Security Group in the Group Policy Targeting Editor">
+  <img src="https://i.imgur.com/R4gD0vQ.png" width="750" alt="Selecting Security Group in the Group Policy Targeting Editor">
 </p>
 
 I opened the group selector.
 
 <p align="center">
-  <img src="https://i.imgur.com/Xf1RBDt.png" width="750" alt="Opening the security group selector in the Targeting Editor">
+  <img src="https://i.imgur.com/uziQgNA.png" width="750" alt="Opening the security group selector in the Targeting Editor">
 </p>
 
 I selected the `O_HR` security group.
 
 <p align="center">
-  <img src="https://i.imgur.com/3qTKhTy.png" width="750" alt="Selecting the O HR group for item-level targeting">
+  <img src="https://i.imgur.com/hNtkAiE.png" width="750" alt="Selecting the O HR group for item-level targeting">
 </p>
 
-The original lab selected **Computer in group** for the targeting condition.
+I selected **Computer in group** for the targeting condition.
 
 <p align="center">
-  <img src="https://i.imgur.com/xMKeLFd.png" width="750" alt="Targeting computers that belong to the O HR security group">
+  <img src="https://i.imgur.com/sepC9Gl.png" width="750" alt="Targeting computers that belong to the O HR security group">
 </p>
-
-> Use **Computer in group** when `O_HR` contains computer accounts. If `O_HR` contains employee user accounts, select **User in group** because the mapped drive is configured under User Configuration.
 
 I applied and saved the mapped-drive preference.
 
 <p align="center">
-  <img src="https://i.imgur.com/pGIWXB0.png" width="750" alt="Saving the O HR mapped drive preference">
+  <img src="https://i.imgur.com/nEl0hDl.png" width="750" alt="Saving the O HR mapped drive preference">
 </p>
 
 ### 12. Linked the Drive-Map GPO
@@ -472,26 +464,25 @@ I applied and saved the mapped-drive preference.
 In Group Policy Management, I right-clicked the `Ottawa` OU and selected **Link an Existing GPO**.
 
 <p align="center">
-  <img src="https://i.imgur.com/EYBfbi9.png" width="750" alt="Linking an existing GPO to the Ottawa OU">
+  <img src="https://i.imgur.com/fJ6Fraw.png" width="750" alt="Linking an existing GPO to the Ottawa OU">
 </p>
 
 I selected `O_HR Mapped drive` and completed the link.
 
 <p align="center">
-  <img src="https://i.imgur.com/uDdFBlz.png" width="750" alt="Selecting the O HR Mapped drive Group Policy Object">
+  <img src="https://i.imgur.com/b9FjG7G.png" width="750" alt="Selecting the O HR Mapped drive Group Policy Object">
 </p>
 
-Because the mapped drive is configured under **User Configuration**, the GPO must apply to the target user accounts. If it is linked only to an OU containing computers, Group Policy loopback processing would be required.
 
 ### 13. Validated the Mapped Drive
 
 On the domain client, I opened File Explorer and confirmed that the departmental share appeared as a mapped network location.
 
 <p align="center">
-  <img src="https://i.imgur.com/xDTPL5u.png" width="750" alt="O HR Share displayed as a mapped network drive on the domain client">
+  <img src="https://i.imgur.com/Isb0jxo.png" width="750" alt="O HR Share displayed as a mapped network drive on the domain client">
 </p>
 
-> The GPO configuration screenshot assigns `H:`, while the client-validation screenshot displays `Z:`. These captures represent different lab stages. The final deployment should use one consistent drive letter.
+P.S - I changed the drive letter in between the lab, hence why the the `H` at the beginning  and the `Z` at the end of the project. 
 
 ## Validation Results
 
