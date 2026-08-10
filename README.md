@@ -503,7 +503,7 @@ P.S - I changed the drive letter in between the lab, hence why the the `H` at th
 | Drive-map GPO linked to an OU | Passed |
 | Mapped network location displayed on the client | Passed |
 
-## Key Takeaways
+## Project Outcome
 
 This project demonstrated how Windows Server and Group Policy can provide centralized access to shared organizational resources.
 
